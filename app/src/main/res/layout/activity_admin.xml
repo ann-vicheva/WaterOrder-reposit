@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.waterorderv2.AdminActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFon"
+        android:orientation="vertical"
+        android:isScrollContainer="true">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/razdel6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/BigCardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Додати одиницю товару"
+                    android:layout_margin="10dp"
+                    style="@style/TextViewRazdel"/>
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:hint="Назва.."
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etDescr"
+                    android:layout_width="match_parent"
+                    android:hint="Опис.."
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etCost"
+                    android:layout_width="match_parent"
+                    android:hint="Вартість.."
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/butAdd"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="addProduct"
+                    android:text="Додати до каталогу" />
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/razdel8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/BigCardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/butRefr"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="refreshProductList"
+                    android:text="Оновити каталог" />
+
+                <View
+                    android:id="@+id/View04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#616161" />
+
+                <TextView
+                    android:id="@+id/tvProductList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/View05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#616161" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/razdel7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/BigCardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Видалити одиницю товару"
+                    android:layout_margin="10dp"
+                    style="@style/TextViewRazdel"/>
+
+
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etIdDelete"
+                    android:layout_width="match_parent"
+                    android:hint="Введіть id товару, який видалити.."
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/butDel"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="deleteProduct"
+                    android:text="Видалити з каталогу" />
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/razdel9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/BigCardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Змінити одиницю товару"
+                    android:layout_margin="10dp"
+                    style="@style/TextViewRazdel"/>
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etIdChange"
+                    android:layout_width="match_parent"
+                    android:hint="Введіть id товару, який змінити.."
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etTitleС"
+                    android:layout_width="match_parent"
+                    android:hint="Назва.."
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etDescrС"
+                    android:layout_width="match_parent"
+                    android:hint="Опис.."
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/etCostС"
+                    android:layout_width="match_parent"
+                    android:hint="Вартість.."
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/butChange"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="changeProduct"
+                    android:text="Внести зміни" />
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/razdel10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/BigCardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/butViewOrd"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="viewOrderList"
+                    android:text="Переглянути список замовлень" />
+
+                <View
+                    android:id="@+id/View07"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#616161" />
+
+                <TextView
+                    android:id="@+id/tvOrderList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/View08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#616161" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

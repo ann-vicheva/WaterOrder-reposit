@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.waterorderv2.MainActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorFon"
+            android:orientation="vertical"
+            android:isScrollContainer="true">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/razdel1"
+            android:onClick="card1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            style="@style/BigCardView">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/fon1"
+                    android:layout_height="match_parent" />
+
+</android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/razdel2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:onClick="card2"
+            style="@style/BigCardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Користувачу.."
+                            android:layout_margin="10dp"
+                            style="@style/TextViewRazdel"/>
+
+                        <EditText
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:id="@+id/etUserLog"
+                            android:layout_width="match_parent"
+                            android:hint="Логін"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:id="@+id/etUserPas"
+                            android:layout_width="match_parent"
+                            android:hint="Пароль"
+                            android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/buttonLogIn"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="LogInUser"
+                            android:text="Увійти" />
+
+                        <Button
+                            android:id="@+id/buttonReg"
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="RegUser"
+                            android:text="Зареєструватися" />
+                </LinearLayout>
+                </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/razdel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    style="@style/BigCardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Адміністратору.."
+                                    android:layout_margin="10dp"
+                                    style="@style/TextViewRazdel"/>
+
+                                <EditText
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:id="@+id/etAdminLog"
+                                    android:layout_width="match_parent"
+                                    android:hint="Логін"
+                                    android:layout_height="wrap_content" />
+
+                                <EditText
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:id="@+id/etAdminPas"
+                                    android:layout_width="match_parent"
+                                    android:hint="Пароль"
+                                    android:layout_height="wrap_content" />
+
+                                        <Button
+                                            android:id="@+id/buttonLogInA"
+                                            android:layout_margin="5dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:onClick="LogInAdmin"
+                                            android:text="Увійти" />
+
+
+
+                        </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+<!--
+<android.support.v7.widget.CardView
+android:id="@+id/razdel4"
+android:layout_width="match_parent"
+android:layout_height="220dp"
+style="@style/BigCardView">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <TextView
+            style="@style/TextViewRazdel"
+            android:text="kkkkk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="read"
+            android:text="Read DB" />
+
+
+
+
+
+</LinearLayout>
+
+</android.support.v7.widget.CardView>
+-->
+        </LinearLayout>
+
+</ScrollView>
